@@ -1,5 +1,5 @@
 
-let finalhtml = [];
+
 
 const engineer = (dataen) =>{
 return `<div class="card">
@@ -41,8 +41,10 @@ const totalp = (final) => {
         <title>Company Employees</title>
       </head>
       <body>
+      <center>
+      <h1>FINAL TEAM COMPOSTITION</h1>
       ${final}
-
+      </center>  
       </body>
       </html>
       `
