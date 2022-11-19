@@ -32,17 +32,20 @@ const Manager = (dataen) =>{
         </div>`
         }
 const totalp = (final) => {
-    return `<!doctype html>
-    <html>
-    <head>
-    <title>Team Page</title>
-    <meta name="description" content="Our first page">
-    <meta name="keywords" content="html tutorial template">
-    </head>
-    <body>
-    ${final}
-    </body>
-    </html>`
+    return `<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Company Employees</title>
+      </head>
+      <body>
+      ${final}
+
+      </body>
+      </html>
+      `
 }
 
 // create added html for loop

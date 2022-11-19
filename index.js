@@ -125,11 +125,15 @@ const finishhtml = () => {
        
       }
      var finalhtmlfinish = htmlfinish.totalp(htmlarr);
+         
+    fs.writeFile('./dist/index.html', finalhtmlfinish,function(err, result) {
+        if(err) console.log('error', err);
+        else{
+            console.log('results are added, please check index.html')
+        }
+      })
 }    
-    
-    // fs.writeFile('./dist/index.html', htmlfinish.fina(emplarr).toString(),function(err, result) {
-    //     if(err) console.log('error', err);
-    //   })
+
 // create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
 // pass in outside informatio to make the proper call
