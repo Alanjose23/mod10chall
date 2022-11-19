@@ -4,7 +4,9 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 const path = require('./dist/index.html');
+const finalform = require('./createpage')
 const emplarr = [];
+// inital prompt
 const inq2 = [{
     type: 'input',
     name: 'name',
@@ -23,6 +25,7 @@ const inq2 = [{
     message: 'What is your office number?'
 }]
 // engineer
+// prompt on engineer
 const inq4 = [{
     type: 'input',
     name: 'name2',
@@ -41,6 +44,7 @@ const inq4 = [{
     message: 'What is your engineer github?'
 }]
 // intern
+// third prompt on intern
 const inq5 = [{
     type: 'input',
     name: 'name3',
@@ -66,7 +70,7 @@ const inq3 = [{
     choices: ['Engineer','Intern']
 }]
 
-
+// call inital prompt and then do prompt listed by newlist
 inquirer.prompt(inq2).then(data =>{
     // createManager(data.name,data.email,data.email,data.offnum);
     newlist()
@@ -97,6 +101,6 @@ inquirer.prompt(inq5).then(data =>{
 })}
 
 
-function createManager(n,e,){
-
-}
+// create fs file sync with page to outside html doc
+// pass in data using logic with type of call being used by callRole()
+// pass in outside informatio to make the proper call
