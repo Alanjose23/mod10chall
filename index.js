@@ -4,7 +4,7 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 
-const htmlfinish = require('./createpage');
+const htmlfinish = require('./src/createpage');
 var emplarr = [];
 // inital prompt
 const inq2 = [{
@@ -74,6 +74,7 @@ const inq3 = [{
 inquirer.prompt(inq2).then(data =>{
    var newm = new Manager(data.name,data.email,data.id,data.offnum);
     emplarr.push(newm);
+    
     newlist()
 
 })
@@ -101,15 +102,24 @@ function addInt() {
 inquirer.prompt(inq5).then(data =>{
 var newi = new Intern(data.name,data.id,data.email,data.sch);
 emplarr.push(newi);
-finishhtml()
+finishhtml();
+// finishhtml()
 })}
 
 const finishhtml = () => {
-    console.log(htmlfinish.totalp(emplarr))
+    for (const index in emplarr) { 
+        if (emplarr[index].getRole() === 'Manager') {
+            console.log('created manager');
+        }
+        else if(emplarr[index].getRole() === 'Intern') {
+            console.log('created intern');
+        }
+      }
+}    
+    
     // fs.writeFile('./dist/index.html', htmlfinish.fina(emplarr).toString(),function(err, result) {
     //     if(err) console.log('error', err);
     //   })
-}
 // create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
 // pass in outside informatio to make the proper call

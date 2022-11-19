@@ -1,5 +1,5 @@
 
-const finalhtml = [];
+let finalhtml = [];
 
 const engineer = (dataen) =>{
 return `<div class="card">
@@ -48,8 +48,8 @@ const totalp = (final) => {
 // create added html for loop
 function pagef(lit){
 
-const htmlc = [];
-for(i = 0; i > 4; i++){
+let htmlc = [];
+for(i = 0; i > lit; i++){
 if(lit.findRole() === 'Manager'){
   htmlc.push(Manager(lit[i]))
 }
@@ -67,4 +67,4 @@ return totalp(finalhtml);
 
 
 
-module.exports = { totalp };
+module.exports = { totalp, engineer };
