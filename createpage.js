@@ -68,4 +68,4 @@ totalp(lite);
 }
 
 
-module.exports = fina();
+module.exports = { fina };

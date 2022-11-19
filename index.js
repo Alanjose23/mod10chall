@@ -4,7 +4,7 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 
-const htmlfinish = ;
+const htmlfinish = require('./createpage');
 var emplarr = [];
 // inital prompt
 const inq2 = [{
@@ -105,7 +105,7 @@ finishhtml()
 })}
 
 const finishhtml = () => {
-    fs.writeFile('./dist/index.html', htmlfinish(emplarr))
+    fs.writeFile('./dist/index.html', htmlfinish.fina(emplarr))
 }
 // create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
