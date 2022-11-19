@@ -1,4 +1,4 @@
-const fina = (lite) =>{
+
 const finalhtml = [];
 
 const engineer = (dataen) =>{
@@ -58,14 +58,13 @@ else if(lit.findRole() === 'Engineer'){
 }
 else {
     htmlc.push(intern(lit[i]))
-}
+}}
 finalhtml = htmlc.join('');
 return totalp(finalhtml);
-}
-}
 
-totalp(lite);
 }
 
 
-module.exports = { fina };
+
+
+module.exports = { totalp };
