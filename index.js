@@ -72,7 +72,8 @@ const inq3 = [{
 
 // call inital prompt and then do prompt listed by newlist
 inquirer.prompt(inq2).then(data =>{
-   createManager(data.name,data.email,data.id,data.offnum);
+   var newm = new Manager(data.name,data.email,data.id,data.offnum);
+    emplarr.push(newm);
     newlist()
 
 })
@@ -92,16 +93,18 @@ function newlist(){
     })}
 function addEng() {
 inquirer.prompt(inq4).then(data =>{
-createEngineer(data.name,data.email,data.id,data.git);
+var newe = new Engineer(data.name,data.email,data.id,data.git);
+emplarr.push(newe);
 newlist()
     })}
 function addInt() {
 inquirer.prompt(inq5).then(data =>{
-createIntern(data.name,data.id,data.email,data.sch);
+var newi = new Intern(data.name,data.id,data.email,data.sch);
+emplarr.push(newi);
 })}
 
 const finishhtml = () => {
-
+    fs.writeFile(path,page(emplarr))
 }
 // create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
