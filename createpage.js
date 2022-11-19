@@ -31,7 +31,7 @@ const Manager = (dataen) =>{
         </div>
         </div>`
         }
-const totalp = () => {
+const totalp = (final) => {
     return `<!doctype html>
     <html>
     <head>
@@ -40,10 +40,29 @@ const totalp = () => {
     <meta name="keywords" content="html tutorial template">
     </head>
     <body>
-    ${finalhtml}
+    ${final}
     </body>
     </html>`
 }
+
+// create added html for loop
+function pagef(lit){
+const htmlc = [];
+for(i = 0; i > lit.length; i++){
+if(lit.findRole() === 'Manager'){
+  htmlc.push(Manager(lit[i]))
+}
+else if(lit.findRole() === 'Engineer'){
+  htmlc.push(engineer(lit[i]))
+}
+else {
+    htmlc.push(intern(lit[i]))
+}
+finalhtml = htmlc.join('');
+return totalp(finalhtml);
+}
+}
+
 }
 
 module.exports = final();

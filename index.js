@@ -28,15 +28,15 @@ const inq2 = [{
 // prompt on engineer
 const inq4 = [{
     type: 'input',
-    name: 'name2',
+    name: 'name',
    message: 'what is your name'
 },{
     type: 'input',
-    name: 'id2',
+    name: 'id',
     message: 'What is your engineer id'
 },{
     type: 'input',
-    name: 'email2',
+    name: 'email',
     message: 'what is your engineer email?'
 },{
     type: 'input',
@@ -47,15 +47,15 @@ const inq4 = [{
 // third prompt on intern
 const inq5 = [{
     type: 'input',
-    name: 'name3',
+    name: 'name',
    message: 'what is your name'
 },{
     type: 'input',
-    name: 'id3',
+    name: 'id',
     message: 'What is your intern id'
 },{
     type: 'input',
-    name: 'email3',
+    name: 'email',
     message: 'what is your intern email?'
 },{
     type: 'input',
@@ -72,7 +72,7 @@ const inq3 = [{
 
 // call inital prompt and then do prompt listed by newlist
 inquirer.prompt(inq2).then(data =>{
-    // createManager(data.name,data.email,data.email,data.offnum);
+   createManager(data.name,data.email,data.id,data.offnum);
     newlist()
 
 })
@@ -86,21 +86,23 @@ function newlist(){
         else {
 // create prompt for 5
             addInt()
+            finishhtml()
         }
 // create call for new engineer
     })}
 function addEng() {
 inquirer.prompt(inq4).then(data =>{
-// createManager(data.name,data.email,data.email,data.offnum);
+createEngineer(data.name,data.email,data.id,data.git);
 newlist()
-
     })}
 function addInt() {
 inquirer.prompt(inq5).then(data =>{
-// createManager(data.name,data.email,data.email,data.offnum);
+createIntern(data.name,data.id,data.email,data.sch);
 })}
 
+const finishhtml = () => {
 
-// create fs file sync with page to outside html doc
+}
+// create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
 // pass in outside informatio to make the proper call
