@@ -5,7 +5,7 @@ const engineer = (dataen) =>{
 return `<div class="card">
 <div class="container">
   <h4><b>${dataen.name}</b></h4>
-  <p>${dataen.id}}</p>
+  <p>${dataen.id}</p>
   <p>${dataen.email}</p>
   <p>${dataen.git}</p>
 </div>
@@ -15,7 +15,7 @@ const intern = (dataen) =>{
     return `<div class="card">
     <div class="container">
       <h4><b>${dataen.name}</b></h4>
-      <p>${dataen.id}}</p>
+      <p>${dataen.id}</p>
       <p>${dataen.email}</p>
       <p>${dataen.git}</p>
     </div>
@@ -25,7 +25,7 @@ const Manager = (dataen) =>{
         return `<div class="card">
         <div class="container">
           <h4><b>${dataen.name}</b></h4>
-          <p>${dataen.id}}</p>
+          <p>${dataen.id}</p>
           <p>${dataen.email}</p>
           <p>${dataen.git}</p>
         </div>
@@ -40,31 +40,11 @@ const totalp = (final) => {
     <meta name="keywords" content="html tutorial template">
     </head>
     <body>
-    ${pagef(final)}
+    ${final}
     </body>
     </html>`
 }
 
 // create added html for loop
-function pagef(lit){
 
-let htmlc = [];
-for(i = 0; i > lit; i++){
-if(lit.findRole() === 'Manager'){
-  htmlc.push(Manager(lit[i]))
-}
-else if(lit.findRole() === 'Engineer'){
-  htmlc.push(engineer(lit[i]))
-}
-else {
-    htmlc.push(intern(lit[i]))
-}}
-finalhtml = htmlc.join('');
-return totalp(finalhtml);
-
-}
-
-
-
-
-module.exports = { totalp, engineer };
+module.exports = { totalp, engineer, Manager, intern };

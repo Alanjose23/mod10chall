@@ -5,6 +5,7 @@ const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
 
 const htmlfinish = require('./src/createpage');
+const { totalmem } = require('os');
 var emplarr = [];
 // inital prompt
 const inq2 = [{
@@ -107,18 +108,23 @@ finishhtml();
 })}
 
 const finishhtml = () => {
+    let htmlarr = [];
     for (const index in emplarr) { 
         if (emplarr[index].getRole() === 'Manager') {
             console.log('created manager');
+            htmlarr.push(htmlfinish.engineer(emplarr[index]));
         }
         else if(emplarr[index].getRole() === 'Engineer') {
             console.log('created engineer');
+            htmlarr.push(htmlfinish.engineer(emplarr[index]));
         }
         else if(emplarr[index].getRole() === 'Intern') {
             console.log('created intern');
+            htmlarr.push(htmlfinish.engineer(emplarr[index]));
         }
        
       }
+     var finalhtmlfinish = htmlfinish.totalp(htmlarr);
 }    
     
     // fs.writeFile('./dist/index.html', htmlfinish.fina(emplarr).toString(),function(err, result) {
