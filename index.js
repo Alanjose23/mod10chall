@@ -111,9 +111,13 @@ const finishhtml = () => {
         if (emplarr[index].getRole() === 'Manager') {
             console.log('created manager');
         }
+        else if(emplarr[index].getRole() === 'Engineer') {
+            console.log('created engineer');
+        }
         else if(emplarr[index].getRole() === 'Intern') {
             console.log('created intern');
         }
+       
       }
 }    
     
