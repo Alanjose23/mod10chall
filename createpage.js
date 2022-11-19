@@ -1,4 +1,4 @@
-const finalaa = () => {
+const fina = (lite) =>{
 const finalhtml = [];
 
 const engineer = (dataen) =>{
@@ -40,15 +40,16 @@ const totalp = (final) => {
     <meta name="keywords" content="html tutorial template">
     </head>
     <body>
-    ${final}
+    ${pagef(final)}
     </body>
     </html>`
 }
 
 // create added html for loop
 function pagef(lit){
+
 const htmlc = [];
-for(i = 0; i > lit.length; i++){
+for(i = 0; i > 4; i++){
 if(lit.findRole() === 'Manager'){
   htmlc.push(Manager(lit[i]))
 }
@@ -63,6 +64,8 @@ return totalp(finalhtml);
 }
 }
 
+totalp(lite);
 }
 
-module.exports = final();
+
+module.exports = fina();

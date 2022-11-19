@@ -3,9 +3,9 @@ const inquirer = require('inquirer');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
-const path = require('./dist/index.html');
-const finalform = require('./createpage')
-const emplarr = [];
+
+const htmlfinish = ;
+var emplarr = [];
 // inital prompt
 const inq2 = [{
     type: 'input',
@@ -87,7 +87,7 @@ function newlist(){
         else {
 // create prompt for 5
             addInt()
-            finishhtml()
+
         }
 // create call for new engineer
     })}
@@ -101,10 +101,11 @@ function addInt() {
 inquirer.prompt(inq5).then(data =>{
 var newi = new Intern(data.name,data.id,data.email,data.sch);
 emplarr.push(newi);
+finishhtml()
 })}
 
 const finishhtml = () => {
-    fs.writeFile(path,page(emplarr))
+    fs.writeFile('./dist/index.html', htmlfinish(emplarr))
 }
 // create fs file with page to outside html doc
 // pass in data using logic with type of call being used by callRole()
