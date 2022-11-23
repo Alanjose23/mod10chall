@@ -11,6 +11,9 @@ https://github.com/Alanjose23/mod10chall
 ## link to video
 https://drive.google.com/file/d/1oRosZlGifUxgb_6-mptYDr5gXUuwlxpE/view
 
+## TEST
+npm run test, using jest
+
 
 ## installation guide
 
