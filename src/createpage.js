@@ -4,7 +4,7 @@
 const engineer = (dataen) =>{
 return `<div class="card">
 <div class="container">
-  <h4><b>${dataen.name}</b></h4>
+  <h4><b>Engineer: ${dataen.name}</b></h4>
   <p>${dataen.id}</p>
   <p>${dataen.email}</p>
   <p>${dataen.git}</p>
@@ -14,7 +14,7 @@ return `<div class="card">
 const intern = (dataen) =>{
     return `<div class="card">
     <div class="container">
-      <h4><b>${dataen.name}</b></h4>
+      <h4><b>Intern: ${dataen.name}</b></h4>
       <p>${dataen.id}</p>
       <p>${dataen.email}</p>
       <p>${dataen.git}</p>
@@ -24,7 +24,7 @@ const intern = (dataen) =>{
 const Manager = (dataen) =>{
         return `<div class="card">
         <div class="container">
-          <h4><b>${dataen.name}</b></h4>
+          <h4><b>Manager: ${dataen.name}</b></h4>
           <p>${dataen.id}</p>
           <p>${dataen.email}</p>
           <p>${dataen.git}</p>
