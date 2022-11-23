@@ -8,6 +8,9 @@ Are you a manager that needs to keep track of your employees, well never again, 
 
 https://github.com/Alanjose23/mod10chall
 
+##link to video
+https://drive.google.com/file/d/10mqYB1ftCqcfnay45ehMdtZ9P7LvIDlg/view
+
 
 ## installation guide
 
